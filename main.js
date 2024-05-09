@@ -47,7 +47,10 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('public/millennium_falcon/');
+// let path = 'public/millennium_falcon/';
+let path = 'public/hollow_cylinder/';
+
+const loader = new GLTFLoader().setPath(path);
 loader.load('scene.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
